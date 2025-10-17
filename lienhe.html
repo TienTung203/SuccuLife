@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản lý Liên Hệ</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <img src="assets/img/logo.png" class="sidebar-logo" />
+        <ul>
+          <li><a href="dashboard.html">Trang chủ</a></li>
+          <li><a href="senda.html">Loại Sen Đá</a></li>
+          <li><a href="baiviet.html">Bài Viết</a></li>
+          <li><a href="lienhe.html" class="active">Liên Hệ</a></li>
+          <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h1>Quản lý Liên Hệ</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Tên</th>
+              <th>Email</th>
+              <th>Nội dung</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="contactTable"></tbody>
+        </table>
+      </main>
+    </div>
+    <script src="assets/js/lienhe.js"></script>
+    <script src="assets/js/logout.js"></script>
+  </body>
+</html>

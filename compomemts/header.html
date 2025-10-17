@@ -1,0 +1,85 @@
+<!-- header.html - partial -->
+<header
+  class="topbar"
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 16px 24px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+  "
+>
+  <div style="display: flex; align-items: center; gap: 12px">
+    <button
+      id="toggleSidebar"
+      style="
+        background: transparent;
+        border: 0;
+        font-size: 1.1rem;
+        cursor: pointer;
+      "
+    >
+      ☰
+    </button>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="dashboard.html">Dashboard</a> /
+      <span id="breadcrumb-current">Tổng quan</span>
+    </nav>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 12px">
+    <div style="display: flex; flex-direction: column; text-align: right">
+      <small style="color: #7b7b7b">Xin chào,</small>
+      <strong id="adminName" style="color: #234023">Admin</strong>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 8px">
+      <input
+        id="top-search"
+        type="search"
+        placeholder="Tìm kiếm..."
+        style="
+          padding: 8px 10px;
+          border-radius: 8px;
+          border: 1px solid #eee;
+          background: #fafafa;
+        "
+      />
+      <button
+        id="top-logout"
+        style="
+          background: #ef7c70;
+          color: #fff;
+          border: 0;
+          padding: 8px 10px;
+          border-radius: 8px;
+          cursor: pointer;
+        "
+      >
+        Đăng xuất
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  // header partial small behavior
+  document.addEventListener("DOMContentLoaded", () => {
+    const logout = document.getElementById("top-logout");
+    if (logout)
+      logout.addEventListener("click", () => {
+        sessionStorage.removeItem("succulife_admin");
+        // redirect to login
+        location.href = "index.html";
+      });
+
+    // toggle sidebar (add/remove class .collapsed on body)
+    const toggle = document.getElementById("toggleSidebar");
+    if (toggle)
+      toggle.addEventListener("click", () =>
+        document.body.classList.toggle("sidebar-collapsed")
+      );
+  });
+</script>

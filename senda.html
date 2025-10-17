@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản lý Sen Đá</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <img src="assets/img/logo.png" class="sidebar-logo" />
+        <ul>
+          <li><a href="dashboard.html">Trang chủ</a></li>
+          <li><a href="senda.html" class="active">Loại Sen Đá</a></li>
+          <li><a href="baiviet.html">Bài Viết</a></li>
+          <li><a href="lienhe.html">Liên Hệ</a></li>
+          <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h1>Quản lý Loại Sen Đá</h1>
+        <button id="addBtn">+ Thêm mới</button>
+
+        <form id="sendaForm" class="hidden">
+          <input type="text" id="tenSenda" placeholder="Tên sen đá" required />
+          <textarea id="moTa" placeholder="Mô tả"></textarea>
+          <input type="file" id="anhSenda" />
+          <button type="submit">Lưu</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tên</th>
+              <th>Mô tả</th>
+              <th>Ảnh</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="senTable"></tbody>
+        </table>
+      </main>
+    </div>
+    <script src="assets/js/senda.js"></script>
+    <script src="assets/js/logout.js"></script>
+  </body>
+</html>

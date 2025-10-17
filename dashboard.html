@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard | SuccuLife Admin</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <img src="assets/img/logo.png" class="sidebar-logo" alt="logo" />
+        <h3>SuccuLife Admin</h3>
+        <ul>
+          <li><a href="dashboard.html" class="active">Trang chủ</a></li>
+          <li><a href="senda.html">Loại Sen Đá</a></li>
+          <li><a href="baiviet.html">Bài Viết</a></li>
+          <li><a href="lienhe.html">Liên Hệ</a></li>
+          <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h1>Bảng điều khiển</h1>
+        <div class="stats">
+          <div class="card">
+            <h2 id="stat-sen">0</h2>
+            <p>Loại Sen Đá</p>
+          </div>
+          <div class="card">
+            <h2 id="stat-post">0</h2>
+            <p>Bài Viết</p>
+          </div>
+          <div class="card">
+            <h2 id="stat-contact">0</h2>
+            <p>Liên Hệ</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/logout.js"></script>
+  </body>
+</html>

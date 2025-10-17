@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản lý Bài Viết</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <img src="assets/img/logo.png" class="sidebar-logo" />
+        <ul>
+          <li><a href="dashboard.html">Trang chủ</a></li>
+          <li><a href="senda.html">Loại Sen Đá</a></li>
+          <li><a href="baiviet.html" class="active">Bài Viết</a></li>
+          <li><a href="lienhe.html">Liên Hệ</a></li>
+          <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h1>Quản lý Bài Viết</h1>
+        <button id="addPostBtn">+ Thêm Bài Viết</button>
+
+        <form id="baiVietForm" class="hidden">
+          <input
+            type="text"
+            id="tieuDe"
+            placeholder="Tiêu đề bài viết"
+            required
+          />
+          <textarea id="noiDung" placeholder="Nội dung"></textarea>
+          <button type="submit">Lưu</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tiêu đề</th>
+              <th>Nội dung</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="baiVietTable"></tbody>
+        </table>
+      </main>
+    </div>
+    <script src="assets/js/baiviet.js"></script>
+    <script src="assets/js/logout.js"></script>
+  </body>
+</html>

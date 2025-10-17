@@ -1,0 +1,164 @@
+/* dashboard.css — phần mở rộng cho dashboard (cards, biểu đồ, layout) */
+
+:root {
+  --leaf: #cfead0;
+  --accent: #7fb77e;
+  --beige-bg: #f9f9f7;
+  --card-shadow: 0 6px 20px rgba(17, 22, 12, 0.06);
+}
+
+/* đảm bảo ghép cùng style.css */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.main-header .title {
+  font-size: 1.5rem;
+  color: #234023;
+  margin: 0;
+}
+
+.main-header .sub {
+  color: #5b6b5b;
+  font-size: 0.95rem;
+}
+
+/* Grid thống kê lớn hơn, dễ đọc */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kpi {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1rem;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.kpi .label {
+  color: #6b6b6b;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.kpi .value {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+.kpi .meta {
+  font-size: 0.85rem;
+  color: #8a8a8a;
+}
+
+/* area for charts / recent items */
+.panel-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .panel-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* recent activity list */
+.recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.recent-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: background 0.18s;
+}
+.recent-item:hover {
+  background: #f6fbf6;
+}
+.recent-item .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--leaf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #385;
+  font-weight: 700;
+}
+
+/* quick action buttons */
+.quick-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.quick-actions .btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #e6efe6;
+  color: #3b5;
+}
+
+/* small table tweaks for dashboard summaries */
+.small-table th,
+.small-table td {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+}
+.small-table tbody tr:hover td {
+  background: #fafcf9;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  font-size: 0.95rem;
+  color: #6b6b6b;
+}
+.breadcrumb a {
+  color: #4a6b4a;
+  text-decoration: none;
+  font-weight: 600;
+}
